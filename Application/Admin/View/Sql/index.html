@@ -1,0 +1,70 @@
+<include file="Index/header" />
+
+<body>
+<div id="wrapper">
+  <include file="Index/nav"/>
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">SQL注入拦截设置</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="alert alert-warning alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          如果您对以下设置不了解，请保持默认设置，或者<a href="#" class="alert-link">联系我们</a>咨询。 </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"> 基本设置 </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <form name="ddos_form" method="post" id="singcms-form">
+                  <div class="form-group">
+                    <label>拦截处理</label>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="sqltype" id="SQLType1" value="block" <if condition="$vo.sqltype eq 'block'">checked</if>>
+                        仅拦截 </label>
+                      <label>
+                        <input type="radio" name="sqltype" id="SQLType2" value="lock" <if condition="$vo.sqltype eq 'lock'">checked</if>>
+                        拦截后锁定IP </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>统计时间阈值（秒）</label>
+                    <input class="form-control" placeholder="统计时间阈值" name="sqluptime" value="{$vo.sqluptime}">
+                    <p class="help-block">设置过高可能会造成数据库压力增大。</p>
+                  </div>
+                  <div class="form-group">
+                    <label>单位时间注入上限（次）</label>
+                    <input class="form-control" placeholder="单位时间访问上限" name="sqlupcount" value="{$vo.sqlupcount}">
+                    <p class="help-block">每单位时间最高注入次数。</p>
+                  </div>
+                  <div class="form-group">
+                    <label>单次IP锁定时间（分钟）</label>
+                    <input type="hidden" name="id" value="{$vo.id}"/>
+                    <input class="form-control" placeholder="单次IP锁定时间" name="sqllocktime" value="{$vo.sqllocktime}">
+                    <p class="help-block">单次封锁IP时间，超时后恢复正常访问。</p>
+                  </div>
+                  <button type="button" id="singcms-button-submit" class="btn btn-default">提交</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/jquery-1.11.0.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/plugins/metisMenu/metisMenu.min.js"></script> 
+<script src="js/sb-admin-2.js"></script>
+<script>
+    var SCOPE={
+        'save_url':'admin.php?c=sql&a=add',
+        'jump_url':'admin.php?c=sql',
+    }
+</script>
+<include file="Index/footer" />

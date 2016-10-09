@@ -1,0 +1,2630 @@
+[ 2016-10-08T15:57:38+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: module E:\WWW\project\ThinkPHP\Common\functions.php 第 997 行.
+NOTIC: [8] Undefined variable: var E:\WWW\project\ThinkPHP\Common\functions.php 第 1002 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given E:\WWW\project\ThinkPHP\Common\functions.php 第 1002 行.
+NOTIC: [2] http_build_query() [<a href='function.http-build-query'>function.http-build-query</a>]: Parameter 1 expected to be Array or Object.  Incorrect value given E:\WWW\project\ThinkPHP\Common\functions.php 第 1002 行.
+
+[ 2016-10-08T15:57:38+08:00 ] 127.0.0.1 /admin.php?&c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-08T15:57:45+08:00 ] 127.0.0.1 /index.php?m=admin&c=login&a=check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1475913465' WHERE ( admin_id=1 ) [ RunTime:0.0010s ]
+
+[ 2016-10-08T15:57:49+08:00 ] 127.0.0.1 /index.php?m=admin&c=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 40 行.
+NOTIC: [8] Undefined index: catid E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 43 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositionModel.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0380s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_position` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE `status` = 1 AND `lastlogintime` > 1475856000 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0500s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475913467' AND TYPE = 'sql' ) [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0510s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475913469 > ENDTIME ) [ RunTime:0.0150s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475913469' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T15:57:55+08:00 ] 127.0.0.1 /admin.php?c=sqllogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `cms_logs` [ RunTime:0.0840s ]
+SQL: SELECT * FROM `cms_logs` WHERE ( TYPE='sql' )  [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002001s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0020s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T15:57:58+08:00 ] 127.0.0.1 /admin.php?c=sql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0020s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.113007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.113007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:03:23+08:00 ] 127.0.0.1 /admin.php?c=commnet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:Commnet
+
+[ 2016-10-08T16:03:27+08:00 ] 127.0.0.1 /admin.php?c=basic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 5 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 5 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.126007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.126007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:03:29+08:00 ] 127.0.0.1 /admin.php?c=content
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Admin\Controller\ContentController.class.php 第 16 行.
+NOTIC: [8] Undefined index: catid E:\WWW\project\Application\Admin\Controller\ContentController.class.php 第 19 行.
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\ContentController.class.php 第 22 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: catid E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 29 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` <> -1 ORDER BY listorder desc ,news_id desc LIMIT 0,3   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 40 行.
+NOTIC: [8] Undefined index: catid E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 43 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositionModel.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_position` WHERE `status` = 1 ORDER BY id  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-10-08T16:03:39+08:00 ] 127.0.0.1 /admin.php?c=position
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositionModel.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_position` WHERE `status` <> -1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-08T16:03:44+08:00 ] 127.0.0.1 /admin.php?c=commnet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Commnet
+
+[ 2016-10-08T16:03:50+08:00 ] 127.0.0.1 /admin.php?c=content
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Admin\Controller\ContentController.class.php 第 16 行.
+NOTIC: [8] Undefined index: catid E:\WWW\project\Application\Admin\Controller\ContentController.class.php 第 19 行.
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\ContentController.class.php 第 22 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: catid E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 29 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` <> -1 ORDER BY listorder desc ,news_id desc LIMIT 0,3   [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 40 行.
+NOTIC: [8] Undefined index: catid E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 43 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositionModel.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_position` WHERE `status` = 1 ORDER BY id  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-08T16:04:02+08:00 ] 127.0.0.1 /admin.php?c=positioncontent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+NOTIC: [2048] Declaration of Admin\Controller\PositioncontentController::setStatus() should be compatible with that of Admin\Controller\CommonController::setStatus() E:\WWW\project\Application\Admin\Controller\PositioncontentController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\PositioncontentController::listorder() should be compatible with that of Admin\Controller\CommonController::listorder() E:\WWW\project\Application\Admin\Controller\PositioncontentController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositionModel.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_position` WHERE `status` = 1 ORDER BY id  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Admin\Controller\PositioncontentController.class.php 第 11 行.
+NOTIC: [8] Undefined index: position_id E:\WWW\project\Application\Admin\Controller\PositioncontentController.class.php 第 14 行.
+NOTIC: [2048] Declaration of Common\Model\PositioncontentModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` <> -1 AND `position_id` = 2 ORDER BY listorder desc,id desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\project\Application\Runtime\Cache\Admin\b8a8b9d170e6c07d7b463ea02385894d.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010000s ]
+
+[ 2016-10-08T16:06:02+08:00 ] 127.0.0.1 /admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 22 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY  listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0500s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0100s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475913960' AND TYPE = 'ddos' ) [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0100s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475913962 > ENDTIME ) [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475913962' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1475913962','ddos') [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.020000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.020000s ]
+
+[ 2016-10-08T16:12:22+08:00 ] 127.0.0.1 /admin.php?c=commnet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+ERR: 无法加载控制器:Commnet
+
+[ 2016-10-08T16:12:24+08:00 ] 127.0.0.1 /admin.php?c=commnet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Commnet
+
+[ 2016-10-08T16:12:53+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: module E:\WWW\project\ThinkPHP\Common\functions.php 第 997 行.
+NOTIC: [8] Undefined variable: var E:\WWW\project\ThinkPHP\Common\functions.php 第 1002 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given E:\WWW\project\ThinkPHP\Common\functions.php 第 1002 行.
+NOTIC: [2] http_build_query() [<a href='function.http-build-query'>function.http-build-query</a>]: Parameter 1 expected to be Array or Object.  Incorrect value given E:\WWW\project\ThinkPHP\Common\functions.php 第 1002 行.
+
+[ 2016-10-08T16:12:53+08:00 ] 127.0.0.1 /admin.php?&c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:12:54+08:00 ] 127.0.0.1 /admin.php?&c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:13:00+08:00 ] 127.0.0.1 /index.php?m=admin&c=login&a=check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1475914380' WHERE ( admin_id=1 ) [ RunTime:0.0000s ]
+
+[ 2016-10-08T16:13:06+08:00 ] 127.0.0.1 /index.php?m=admin&c=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 40 行.
+NOTIC: [8] Undefined index: catid E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 43 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositionModel.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_position` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE `status` = 1 AND `lastlogintime` > 1475856000 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475914384' AND TYPE = 'sql' ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475914386 > ENDTIME ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475914386' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:13:10+08:00 ] 127.0.0.1 /admin.php?c=commnet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:Commnet
+
+[ 2016-10-08T16:13:22+08:00 ] 127.0.0.1 /admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 22 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY  listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0090s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475914400' AND TYPE = 'ddos' ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0090s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475914402 > ENDTIME ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475914402' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1475914402','ddos') [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:13:26+08:00 ] 127.0.0.1 /admin.php?c=Menu&a=index&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 22 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY  listorder desc,menu_id desc LIMIT 3,3   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0070s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475914404' AND TYPE = 'ddos' ) [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0090s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475914406 > ENDTIME ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475914406' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1475914406','ddos') [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:13:29+08:00 ] 127.0.0.1 /admin.php?c=menu&a=edit&id=21
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( menu_id=21 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-10-08T16:13:35+08:00 ] 127.0.0.1 /admin.php?c=menu&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: UPDATE `cms_menu` SET `name`='评论管理',`type`='1',`m`='admin',`c`='comment',`f`='index',`status`='1' WHERE ( menu_id=21 ) [ RunTime:0.0290s ]
+
+[ 2016-10-08T16:13:36+08:00 ] 127.0.0.1 /admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 22 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY  listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475914414' AND TYPE = 'ddos' ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475914416 > ENDTIME ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475914416' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1475914416','ddos') [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:13:38+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 105 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 131 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 131 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 137 行.
+NOTIC: [8] Undefined variable: pageRes E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.126008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.126008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-08T16:13:48+08:00 ] 127.0.0.1 /admin.php?c=menu&a=listorder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+NOTIC: 建议使用E方法替代throw_exception
+
+[ 2016-10-08T16:13:50+08:00 ] 127.0.0.1 /admin.php?c=menu&a=listorder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+NOTIC: 建议使用E方法替代throw_exception
+
+[ 2016-10-08T16:19:05+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_comments`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 105 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 131 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 131 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 137 行.
+NOTIC: [8] Undefined variable: pageRes E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:19:35+08:00 ] 127.0.0.1 /admin.php?c=commnet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Commnet
+
+[ 2016-10-08T16:19:40+08:00 ] 127.0.0.1 /admin.php?c=commnet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+ERR: 无法加载控制器:Commnet
+
+[ 2016-10-08T16:19:42+08:00 ] 127.0.0.1 /admin.php?c=commnet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Commnet
+
+[ 2016-10-08T16:19:45+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_comments`  [ RunTime:0.0000s ]
+
+[ 2016-10-08T16:19:50+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0270s ]
+SQL: SELECT * FROM `cms_comments`  [ RunTime:0.0010s ]
+
+[ 2016-10-08T16:20:08+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_comments` LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-10-08T16:20:14+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_comments` LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-10-08T16:20:28+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `cms_comments`  [ RunTime:0.0010s ]
+
+[ 2016-10-08T16:20:40+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_comments`  [ RunTime:0.0010s ]
+
+[ 2016-10-08T16:22:59+08:00 ] 127.0.0.1 /admin.php?c=commnet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+ERR: 无法加载控制器:Commnet
+
+[ 2016-10-08T16:23:03+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_comments`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 105 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 136 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 136 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 136 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 136 行.
+NOTIC: [8] Undefined variable: pageRes E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:23:56+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_comments`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 105 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 136 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 136 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 136 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 136 行.
+NOTIC: [8] Undefined variable: pageRes E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-08T16:24:18+08:00 ] 127.0.0.1 /admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 22 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY  listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475915056' AND TYPE = 'ddos' ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475915058 > ENDTIME ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475915058' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1475915058','ddos') [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:24:25+08:00 ] 127.0.0.1 /admin.php?c=menu&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: menus E:\WWW\project\Application\Runtime\Cache\Admin\31553d7bb41170a30982ff9dddd5d67e.php 第 127 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-10-08T16:24:34+08:00 ] 127.0.0.1 /admin.php?c=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with that of Admin\Controller\CommonController::setStatus() E:\WWW\project\Application\Admin\Controller\AdminController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_admin` WHERE `status` <> -1 ORDER BY admin_id desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:24:38+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_comments`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 105 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 136 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 136 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 136 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 130 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 136 行.
+NOTIC: [8] Undefined variable: pageRes E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:24:54+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_comments`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 105 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 136 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 136 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 136 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 136 行.
+NOTIC: [8] Undefined variable: pageRes E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-10-08T16:25:22+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_comments`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 105 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 135 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 135 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 135 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 135 行.
+NOTIC: [8] Undefined variable: pageRes E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-10-08T16:26:46+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_comments`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 135 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 135 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 135 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 135 行.
+NOTIC: [8] Undefined variable: pageRes E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:26:59+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_comments`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 135 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 135 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 135 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 135 行.
+NOTIC: [8] Undefined variable: pageRes E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-10-08T16:27:34+08:00 ] 127.0.0.1 /admin.php?c=commnet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Commnet
+
+[ 2016-10-08T16:47:01+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 10 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0080s ]
+ERR: 1054:Unknown column 'listorder' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM `cms_comments` ORDER BY  listorder desc,menu_id desc LIMIT 0,3  
+ERR: 1054:Unknown column 'listorder' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM `cms_comments` ORDER BY  listorder desc,menu_id desc LIMIT 0,3  
+
+[ 2016-10-08T16:47:20+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 10 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0080s ]
+ERR: 1054:Unknown column 'menu_id' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM `cms_comments` ORDER BY menu_id desc LIMIT 0,3  
+ERR: 1054:Unknown column 'menu_id' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM `cms_comments` ORDER BY menu_id desc LIMIT 0,3  
+
+[ 2016-10-08T16:47:32+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 10 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_comments` ORDER BY id desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_comments` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-08T16:47:36+08:00 ] 127.0.0.1 /admin.php?c=Comment&a=index&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_comments` ORDER BY id desc LIMIT 3,3   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_comments` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:47:38+08:00 ] 127.0.0.1 /admin.php?c=Comment&a=index&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_comments` ORDER BY id desc LIMIT 0,3   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_comments` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-08T16:47:44+08:00 ] 127.0.0.1 /admin.php?c=Comment&a=index&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_comments` ORDER BY id desc LIMIT 3,3   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_comments` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:47:47+08:00 ] 127.0.0.1 /admin.php?c=Comment&a=index&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_comments` ORDER BY id desc LIMIT 0,3   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_comments` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-08T16:48:35+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 10 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_comments` ORDER BY id desc LIMIT 0,3   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_comments` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+NOTIC: [8] Undefined variable: menu E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-10-08T16:48:39+08:00 ] 127.0.0.1 /admin.php?c=menu&a=edit&id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: name E:\WWW\project\Application\Runtime\Cache\Admin\a77aa83c121d51b6cd699ea2b65451f6.php 第 119 行.
+NOTIC: [8] Undefined index: type E:\WWW\project\Application\Runtime\Cache\Admin\a77aa83c121d51b6cd699ea2b65451f6.php 第 125 行.
+NOTIC: [8] Undefined index: type E:\WWW\project\Application\Runtime\Cache\Admin\a77aa83c121d51b6cd699ea2b65451f6.php 第 126 行.
+NOTIC: [8] Undefined index: m E:\WWW\project\Application\Runtime\Cache\Admin\a77aa83c121d51b6cd699ea2b65451f6.php 第 133 行.
+NOTIC: [8] Undefined index: c E:\WWW\project\Application\Runtime\Cache\Admin\a77aa83c121d51b6cd699ea2b65451f6.php 第 139 行.
+NOTIC: [8] Undefined index: f E:\WWW\project\Application\Runtime\Cache\Admin\a77aa83c121d51b6cd699ea2b65451f6.php 第 145 行.
+NOTIC: [8] Undefined index: status E:\WWW\project\Application\Runtime\Cache\Admin\a77aa83c121d51b6cd699ea2b65451f6.php 第 160 行.
+NOTIC: [8] Undefined index: status E:\WWW\project\Application\Runtime\Cache\Admin\a77aa83c121d51b6cd699ea2b65451f6.php 第 161 行.
+NOTIC: [8] Undefined index: menu_id E:\WWW\project\Application\Runtime\Cache\Admin\a77aa83c121d51b6cd699ea2b65451f6.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-10-08T16:48:45+08:00 ] 127.0.0.1 /admin.php?c=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with that of Admin\Controller\CommonController::setStatus() E:\WWW\project\Application\Admin\Controller\AdminController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_admin` WHERE `status` <> -1 ORDER BY admin_id desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-10-08T16:49:48+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 10 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_comments` ORDER BY id desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_comments` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: admin_id E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+NOTIC: [8] Undefined index: admin_id E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+NOTIC: [8] Undefined index: admin_id E:\WWW\project\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:54:16+08:00 ] 127.0.0.1 /admin.php?c=menu&a=setStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0000s ]
+NOTIC: 建议使用E方法替代throw_exception
+
+[ 2016-10-08T16:54:31+08:00 ] 127.0.0.1 /admin.php?c=menu&a=setStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0090s ]
+NOTIC: 建议使用E方法替代throw_exception
+
+[ 2016-10-08T16:55:27+08:00 ] 127.0.0.1 /admin.php?c=menu&a=setStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0100s ]
+NOTIC: 建议使用E方法替代throw_exception
+
+[ 2016-10-08T16:57:53+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 10 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_comments` ORDER BY id desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_comments` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0020s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:58:02+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 10 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_comments` ORDER BY id desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_comments` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0020s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:58:07+08:00 ] 127.0.0.1 /admin.php?c=comment&a=delete
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0000s ]
+SQL: DELETE FROM `cms_comments` WHERE ( id=25 ) [ RunTime:0.0000s ]
+
+[ 2016-10-08T16:58:08+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 10 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_comments` ORDER BY id desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_comments` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T16:58:52+08:00 ] 127.0.0.1 /admin.php?c=comment&a=delete
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_comments` WHERE ( id=24 ) [ RunTime:0.0000s ]
+
+[ 2016-10-08T16:59:03+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 10 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_comments` ORDER BY id desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_comments` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-08T16:59:41+08:00 ] 127.0.0.1 /admin.php?c=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with that of Admin\Controller\CommonController::setStatus() E:\WWW\project\Application\Admin\Controller\AdminController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_admin` WHERE `status` <> -1 ORDER BY admin_id desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010000s ]
+
+[ 2016-10-08T16:59:42+08:00 ] 127.0.0.1 /admin.php?c=basic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 5 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 5 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-08T16:59:44+08:00 ] 127.0.0.1 /admin.php?c=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with that of Admin\Controller\CommonController::setStatus() E:\WWW\project\Application\Admin\Controller\AdminController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_admin` WHERE `status` <> -1 ORDER BY admin_id desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-08T17:00:21+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 10 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_comments` ORDER BY id desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_comments` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0020s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T17:06:41+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 40 行.
+NOTIC: [8] Undefined index: catid E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 43 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositionModel.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_position` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE `status` = 1 AND `lastlogintime` > 1475856000 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0160s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475917599' AND TYPE = 'sql' ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0070s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475917601 > ENDTIME ) [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475917601' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T17:07:50+08:00 ] 127.0.0.1 /admin.php?c=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with that of Admin\Controller\CommonController::setStatus() E:\WWW\project\Application\Admin\Controller\AdminController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_admin` WHERE `status` <> -1 ORDER BY admin_id desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-08T17:07:54+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 40 行.
+NOTIC: [8] Undefined index: catid E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 43 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositionModel.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_position` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE `status` = 1 AND `lastlogintime` > 1475856000 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0090s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475917672' AND TYPE = 'sql' ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475917674 > ENDTIME ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475917674' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-08T17:07:55+08:00 ] 127.0.0.1 /admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 22 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY  listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0070s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475917673' AND TYPE = 'ddos' ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0070s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475917675 > ENDTIME ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475917675' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1475917675','ddos') [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012001s ]
+
+[ 2016-10-08T17:07:57+08:00 ] 127.0.0.1 /admin.php?c=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with that of Admin\Controller\CommonController::setStatus() E:\WWW\project\Application\Admin\Controller\AdminController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_admin` WHERE `status` <> -1 ORDER BY admin_id desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-10-08T17:07:59+08:00 ] 127.0.0.1 /admin.php?c=basic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 5 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 5 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T17:08:05+08:00 ] 127.0.0.1 /admin.php?c=position
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositionModel.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_position` WHERE `status` <> -1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0020s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T17:08:08+08:00 ] 127.0.0.1 /admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 22 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY  listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475917686' AND TYPE = 'ddos' ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0090s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475917688 > ENDTIME ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475917688' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1475917688','ddos') [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012001s ]
+
+[ 2016-10-08T17:08:09+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 40 行.
+NOTIC: [8] Undefined index: catid E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 43 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositionModel.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_position` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE `status` = 1 AND `lastlogintime` > 1475856000 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475917687' AND TYPE = 'sql' ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0070s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475917689 > ENDTIME ) [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475917689' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T17:08:09+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 40 行.
+NOTIC: [8] Undefined index: catid E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 43 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositionModel.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_position` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE `status` = 1 AND `lastlogintime` > 1475856000 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475917687' AND TYPE = 'sql' ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475917689 > ENDTIME ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475917689' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T17:08:10+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 40 行.
+NOTIC: [8] Undefined index: catid E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 43 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositionModel.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_position` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE `status` = 1 AND `lastlogintime` > 1475856000 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0070s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475917687' AND TYPE = 'sql' ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0060s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475917689 > ENDTIME ) [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475917689' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T17:08:11+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 40 行.
+NOTIC: [8] Undefined index: catid E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 43 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositionModel.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_position` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE `status` = 1 AND `lastlogintime` > 1475856000 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475917689' AND TYPE = 'sql' ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0070s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475917691 > ENDTIME ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475917691' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T17:08:12+08:00 ] 127.0.0.1 /admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 22 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY  listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0090s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475917690' AND TYPE = 'ddos' ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0070s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475917692 > ENDTIME ) [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475917692' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1475917692','ddos') [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-10-08T17:08:13+08:00 ] 127.0.0.1 /admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 22 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY  listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0060s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475917691' AND TYPE = 'ddos' ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0070s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475917693 > ENDTIME ) [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475917693' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1475917693','ddos') [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2016-10-08T17:08:14+08:00 ] 127.0.0.1 /admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 22 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY  listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0050s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475917692' AND TYPE = 'ddos' ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0060s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475917694 > ENDTIME ) [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475917694' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1475917694','ddos') [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `cms_lock_logs` (`IP`,`TYPE`,`ENDTIME`,`NO`,`MSG`) VALUES ('127.0.0.1','ddos','1475917754','1001','请不要重复刷新页面') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_logs` [ RunTime:0.0070s ]
+SQL: INSERT INTO `cms_logs` (`TIME`,`IP`,`TYPE`,`RESULT`,`OTHER`) VALUES ('2016-10-08 17:09:14','127.0.0.1','ddos','锁定IP','请不要重复刷新页面') [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007001s ]
+
+[ 2016-10-08T17:08:15+08:00 ] 127.0.0.1 /admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 22 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY  listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0090s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475917693' AND TYPE = 'ddos' ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475917695 > ENDTIME ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475917695' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: NO E:\WWW\project\Application\Admin\Controller\DdosController.class.php 第 60 行.
+NOTIC: [8] Undefined index: MSG E:\WWW\project\Application\Admin\Controller\DdosController.class.php 第 60 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: event_no E:\WWW\project\Application\Runtime\Cache\Admin\4ed8841c37f0d99bc82cb2d1f226ebaa.php 第 30 行.
+NOTIC: [8] Undefined variable: event_msg E:\WWW\project\Application\Runtime\Cache\Admin\4ed8841c37f0d99bc82cb2d1f226ebaa.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-08T17:08:25+08:00 ] 127.0.0.1 /admin.php?load_file()
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 40 行.
+NOTIC: [8] Undefined index: catid E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 43 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositionModel.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_position` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE `status` = 1 AND `lastlogintime` > 1475856000 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475917703' AND TYPE = 'sql' ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475917705 > ENDTIME ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475917705' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: ddos E:\WWW\project\Application\Admin\Controller\SqlController.class.php 第 120 行.
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1475917705','sql') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_logs` [ RunTime:0.0080s ]
+SQL: INSERT INTO `cms_logs` (`TIME`,`IP`,`TYPE`,`RESULT`,`OTHER`) VALUES ('2016-10-08 17:08:25','127.0.0.1','sql','拦截成功','GET:a:1:{s:11:\\\"load_file()\\\";s:0:\\\"\\\";}') [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: event_no E:\WWW\project\Application\Runtime\Cache\Admin\4ed8841c37f0d99bc82cb2d1f226ebaa.php 第 30 行.
+NOTIC: [8] Undefined variable: event_msg E:\WWW\project\Application\Runtime\Cache\Admin\4ed8841c37f0d99bc82cb2d1f226ebaa.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-08T17:08:31+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 40 行.
+NOTIC: [8] Undefined index: catid E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 43 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\PositionModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositionModel.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_position` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE `status` = 1 AND `lastlogintime` > 1475856000 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0060s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475917709' AND TYPE = 'sql' ) [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0060s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475917711 > ENDTIME ) [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475917711' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: ddos E:\WWW\project\Application\Admin\Controller\SqlController.class.php 第 120 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T17:10:51+08:00 ] 127.0.0.1 /admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 22 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\MenuController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY  listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1475917849' AND TYPE = 'ddos' ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1475917851 > ENDTIME ) [ RunTime:0.0040s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1475917851' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1475917851','ddos') [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T17:10:53+08:00 ] 127.0.0.1 /admin.php?c=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with that of Admin\Controller\CommonController::setStatus() E:\WWW\project\Application\Admin\Controller\AdminController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_admin` WHERE `status` <> -1 ORDER BY admin_id desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: nav E:\WWW\project\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-08T17:10:54+08:00 ] 127.0.0.1 /admin.php?c=basic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 5 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 5 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T17:10:57+08:00 ] 127.0.0.1 /admin.php?c=Ddos&a=logs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cms_logs` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_logs` WHERE ( TYPE='ddos' )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T17:11:08+08:00 ] 127.0.0.1 /admin.php?c=ddos
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.107006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.107006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-08T17:11:12+08:00 ] 127.0.0.1 /admin.php?c=sql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0060s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-08T17:11:16+08:00 ] 127.0.0.1 /admin.php?c=sqllogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cms_logs` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_logs` WHERE ( TYPE='sql' )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-08T18:58:20+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.025001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015001s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 10 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.3010s ]
+SQL: SELECT * FROM `cms_comments` ORDER BY id desc LIMIT 0,3   [ RunTime:0.4200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_comments` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.1740s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0730s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.652038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.652038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.146008s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.146008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011001s ]
+
+[ 2016-10-08T18:58:51+08:00 ] 127.0.0.1 /admin.php?c=comment&a=delete
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0380s ]
+SQL: DELETE FROM `cms_comments` WHERE ( id=30 ) [ RunTime:0.0220s ]
+
+[ 2016-10-08T18:58:53+08:00 ] 127.0.0.1 /admin.php?c=comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: p E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 10 行.
+NOTIC: [8] Undefined index: pagesize E:\WWW\project\Application\Admin\Controller\CommentController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_comments` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `cms_comments` ORDER BY id desc LIMIT 0,3   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_comments` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

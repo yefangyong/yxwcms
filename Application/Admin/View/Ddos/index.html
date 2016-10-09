@@ -1,0 +1,75 @@
+<include file="Index/header" />
+
+<body>
+<div id="wrapper"> 
+  
+  <!-- Navigation -->
+  <include file="Index/nav"/>
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">DDos拦截设置</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="alert alert-warning alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          如果您对以下设置不了解，请保持默认设置，或者<a href="#" class="alert-link">联系我们</a>咨询。 </div>
+        <div class="alert alert-info alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          PHP仅提供应用层的DDos拦截，如有持续大规模DDos请启用硬件防火墙。 </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"> 基本设置 </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <form name="ddos_form" method="post" id="singcms-form">
+                  <div class="form-group">
+                    <label>统计时间阈值（秒）</label>
+                    <input class="form-control" placeholder="统计时间阈值" name="DDosUpTime" value="{$vo.ddosuptime}">
+                    <p class="help-block">设置过高可能会造成数据库压力增大。</p>
+                  </div>
+                  <div class="form-group">
+                    <label>单位时间访问上限（次）</label>
+                    <input class="form-control" placeholder="单位时间访问上限" name="DDosUpCount" value="{$vo.ddosupcount}">
+                    <p class="help-block">每单位时间最高访问次数。</p>
+                  </div>
+                  <div class="form-group">
+                    <label>过量访问处理</label>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="DDosType" id="DDosType1" value="lock" <if condition="$vo.ddostype eq 'lock'">checked</if>>
+                        限时锁定IP </label>
+                      <label>
+                        <input type="radio" name="DDosType" id="DDosType2" value="vcode">
+                        请求输入验证码 </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <input type="hidden" name="id" value="{$vo.id}"/>
+                    <label>单次IP锁定时间（分钟）</label>
+                    <input class="form-control" placeholder="单次IP锁定时间" name="DDoslockTime" value="{$vo.ddoslocktime}">
+                    <p class="help-block">单次封锁IP时间，超时后恢复正常访问。</p>
+                  </div>
+                  <button type="button" class="btn btn-default" id="singcms-button-submit">提交</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/jquery-1.11.0.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/metisMenu.min.js"></script>
+<script src="js/sb-admin-2.js"></script>
+<script>
+  var SCOPE={
+    'save_url':'admin.php?c=ddos&a=add',
+    'jump_url':'admin.php?c=ddos',
+  }
+</script>
+<include file="Index/footer" />
