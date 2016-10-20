@@ -30,7 +30,8 @@ class IndexController extends CommonController {
         if ($type == 'build_html') {
             $this->buildhtml('index', HTML_PATH, 'Index/index');
         } else {
-
+            $res = new DdosController();
+            $res->protect();
             $this->display();
         }
     }

@@ -34,6 +34,8 @@ class CatController extends CommonController{
             'listNews'=>$news,
             'pageres'=>$pageres,
         ));
+        $res = new DdosController();
+        $res->protect();
         $this->display();
     }
 }

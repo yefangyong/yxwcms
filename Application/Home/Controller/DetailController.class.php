@@ -27,6 +27,8 @@ class DetailController extends CommonController{
             'news'=>$news,
             'comments'=>$comments
         ));
+        $res = new DdosController();
+        $res->protect();
         $this->display('Detail/index');
     }
 
