@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2016 年 10 月 05 日 20:06
+-- 生成日期: 2016 年 10 月 10 日 16:37
 -- 服务器版本: 5.5.40
 -- PHP 版本: 5.3.29
 
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `cms_admin` (
 --
 
 INSERT INTO `cms_admin` (`admin_id`, `username`, `password`, `lastloginip`, `lastlogintime`, `email`, `realname`, `status`) VALUES
-(1, 'admin', 'd099d126030d3207ba102efa8e60630a', '0', 1475667279, 'tracywxh0830@126.com', '张三`1', 1),
+(1, 'admin', 'd099d126030d3207ba102efa8e60630a', '0', 1476088427, 'tracywxh0830@126.com', '张三`1', 1),
 (2, 'singwa', 'a8ea3a23aa715c8772dd5b4a981ba6f4', '0', 1458139801, '', '张三', -1),
 (3, 'singwa', 'a8ea3a23aa715c8772dd5b4a981ba6f4', '0', 0, '', '', -1),
 (4, 'singwa3', '79d4026540fdd95e4a0b627c77e6fa44', '0', 1458144621, '', 'singwa', 1),
@@ -73,10 +73,7 @@ CREATE TABLE IF NOT EXISTS `cms_comments` (
 --
 
 INSERT INTO `cms_comments` (`id`, `news_id`, `username`, `comment`, `addtime`) VALUES
-(26, 21, '匿名用户', '习大大，人民的好公仆，好领导', 1474632398),
-(24, 21, '叶方勇', '测试，测试，测试', 1474631078),
-(25, 24, '叶方勇', '中国足球加油，给力，给力', 1474631825),
-(30, 21, '习大大', '中国加油，中国加油！\n', 1474787752);
+(26, 21, '匿名用户', '习大大，人民的好公仆，好领导', 1474632398);
 
 -- --------------------------------------------------------
 
@@ -128,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `cms_lock_logs` (
   `NO` varchar(20) NOT NULL,
   `MSG` varchar(255) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=161 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=162 ;
 
 -- --------------------------------------------------------
 
@@ -144,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `cms_logs` (
   `RESULT` varchar(200) NOT NULL,
   `OTHER` tinytext NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=109 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=111 ;
 
 --
 -- 转存表中的数据 `cms_logs`
@@ -171,6 +168,8 @@ INSERT INTO `cms_logs` (`ID`, `TIME`, `IP`, `TYPE`, `RESULT`, `OTHER`) VALUES
 (88, '2016-09-30 22:16:53', '127.0.0.1', 'ddos', '锁定IP', '请不要重复刷新页面'),
 (89, '2016-09-30 22:24:53', '127.0.0.1', 'ddos', '锁定IP', '请不要重复刷新页面'),
 (90, '2016-10-01 09:57:04', '127.0.0.1', 'ddos', '锁定IP', '请不要重复刷新页面'),
+(110, '2016-10-08 17:08:25', '127.0.0.1', 'sql', '拦截成功', 'GET:a:1:{s:11:\\"load_file()\\";s:0:\\"\\";}'),
+(109, '2016-10-08 17:09:14', '127.0.0.1', 'ddos', '锁定IP', '请不要重复刷新页面'),
 (108, '2016-10-04 20:22:41', '127.0.0.1', 'sql', '拦截成功', 'GET:a:1:{s:11:\\"load_file()\\";s:0:\\"\\";}');
 
 -- --------------------------------------------------------
@@ -215,7 +214,7 @@ INSERT INTO `cms_menu` (`menu_id`, `name`, `parentid`, `m`, `c`, `f`, `data`, `l
 (12, '最新进展', 0, 'home', 'cat', 'index', '', 6, 1, 0),
 (13, '用户管理', 0, 'admin', 'admin', 'index', '', 12, 1, 1),
 (22, 'DDos拦截管理', 0, 'admin', 'ddos', 'index', '', 2, 1, 1),
-(21, '评论管理', 0, 'admin', 'commnet', 'index', '', 4, 1, 1),
+(21, '评论管理', 0, 'admin', 'comment', 'index', '', 4, 1, 1),
 (20, '医疗科技', 0, 'home', 'cat', 'index', '', 0, 1, 0),
 (23, 'DDos拦截日志', 0, 'admin', 'Ddos', 'logs', '', 2, 1, 1),
 (24, 'SQL注入管理', 0, 'admin', 'sql', 'index', '', 1, 1, 1),
@@ -285,12 +284,12 @@ INSERT INTO `cms_news` (`news_id`, `catid`, `title`, `small_title`, `title_font_
 (45, 20, '北大医信携手金山云与上海产研院 开启“智慧和精准健康”新时代 ', '北大医信携手金山云与上海产研院 开启“智慧和精准健康”新时代', '#5674ed', '', '智慧 健康医疗 新时代', '智慧健康新时代', '', 0, 1, '0', 'admin', 1475565577, 0, 0),
 (46, 20, '大数据时代，医疗信息化应该怎么建？ ', '大数据时代，医疗信息化应该怎么建？ ', '#ed568b', '/upload/2016/10/04/57f358b94797a.png', '大数据时代 医疗信息', '大数据时代，医疗信息该如何发展', '', 0, 1, '0', 'admin', 1475565863, 0, 1),
 (47, 20, '2015中国生物医药前沿技术与产业化发展研讨会顺利闭幕', '2015中国生物医药前沿技术与产业化发展研讨会顺利闭幕', '#5674ed', '/upload/2016/10/04/57f35a333a55c.jpg', '生物医药 前沿技术', '中国生物医药前沿技术与产业化发展研讨会', '', 0, 1, '0', 'admin', 1475566223, 0, 2),
-(48, 12, '助推医疗协同和分级诊疗，发力医疗信息化转型 ', '2016 InterSystems中国医疗信息化峰会”在京举', '#5674ed', '/upload/2016/10/04/57f35c4f61acb.jpg', '医疗信息化', '2016 InterSystems中国医疗信息化峰会”在京举行 ', '', 0, 1, '0', 'admin', 1475566722, 0, 2),
+(48, 12, '助推医疗协同和分级诊疗，发力医疗信息化转型 ', '2016 InterSystems中国医疗信息化峰会”在京举', '#5674ed', '/upload/2016/10/04/57f35c4f61acb.jpg', '医疗信息化', '2016 InterSystems中国医疗信息化峰会”在京举行 ', '', 0, 1, '0', 'admin', 1475566722, 0, 3),
 (49, 12, ' Ibrutinib治疗超高危CLL，风险获益良好', ' Ibrutinib治疗超高危CLL，风险获益良好', '#5674ed', '/upload/2016/10/04/57f390dba151b.jpg', 'lbruntinib CLL', ' Ibrutinib治疗超高危CLL，风险获益良好', '', 0, 1, '0', 'admin', 1475580198, 0, 1),
 (50, 12, '20个典型问题，看穿糖尿病眼病', '20个典型问题，看穿糖尿病眼病', '#5674ed', '/upload/2016/10/04/57f39379bdb68.jpg', '糖尿病', '20个典型问题，看穿糖尿病眼病', '', 0, 1, '0', 'admin', 1475580890, 0, 1),
 (51, 12, '2016年诺贝尔生理学或医学奖揭晓！', '2016年诺贝尔生理学或医学奖揭晓！', '#5674ed', '/upload/2016/10/04/57f39483ef55d.jpg', '诺贝尔生理学 医学奖', '2016年诺贝尔生理学或医学奖公布了！', '', 0, 1, '0', 'admin', 1475581220, 0, 2),
 (52, 3, ' “救命药”为何总是缺货？', ' “救命药”为何总是缺货？', '', '', '救命药', ' “救命药”为何总是缺货？', '', 0, 1, '0', 'admin', 1475582774, 0, 1),
-(53, 3, '致敬！41岁医生病倒在岗位 捐出全部可用器官', '致敬！41岁医生病倒在岗位 捐出全部可用器官', '#5674ed', '/upload/2016/10/05/57f4e5d25638a.jpg', '器官 岗位', '41岁医生病倒在岗位 捐出全部可用器官', '', 0, 1, '0', 'admin', 1475667439, 0, 0);
+(53, 3, '致敬！41岁医生病倒在岗位 捐出全部可用器官', '致敬！41岁医生病倒在岗位 捐出全部可用器官', '#5674ed', '/upload/2016/10/05/57f4e5d25638a.jpg', '器官 岗位', '41岁医生病倒在岗位 捐出全部可用器官', '', 0, 1, '0', 'admin', 1475667439, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -464,14 +463,14 @@ CREATE TABLE IF NOT EXISTS `cms_visit_logs` (
   `TIME` int(11) NOT NULL,
   `TYPE` varchar(200) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=250 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=262 ;
 
 --
 -- 转存表中的数据 `cms_visit_logs`
 --
 
 INSERT INTO `cms_visit_logs` (`ID`, `IP`, `TIME`, `TYPE`) VALUES
-(249, '127.0.0.1', 1475667678, 'ddos');
+(261, '127.0.0.1', 1475917851, 'ddos');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

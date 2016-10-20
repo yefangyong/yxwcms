@@ -27,8 +27,6 @@ class MenuController extends Controller{
         $pageRes=$res->show();
         $this->assign('pageRes',$pageRes);
         $this->assign('menus',$menus);
-        $res = new DdosController();
-        $res->protect();
         $this->display();
     }
 
