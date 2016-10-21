@@ -32,6 +32,8 @@ class IndexController extends CommonController {
         } else {
             $res = new DdosController();
             $res->protect();
+            $rel = new SqlController();
+            $rel->protect();
             $this->display();
         }
     }
