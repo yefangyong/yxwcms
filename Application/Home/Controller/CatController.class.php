@@ -3,6 +3,12 @@ namespace Home\Controller;
 use Think\Controller;
 
 class CatController extends CommonController{
+
+    public function __construct(){
+        parent::__construct();
+        parent::filetr();
+    }
+
     public function index(){
         if(!intval($_GET['id'])){
            return  $this->error('ID不合法');

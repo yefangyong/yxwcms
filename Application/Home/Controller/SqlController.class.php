@@ -56,7 +56,10 @@ class SqlController extends CommonController{
         if($rel) {
             $this->add_visit_log('sql');
             $this->add_log('sql', '拦截成功', $info);
-            $this->error('2001', '请不要尝试输入非法参数');
+            $this->assign('bianhao',2001);
+            $this->assign('info','请不要尝试输入非法参数');
+            $this->display("Public/dispatch_jump");
+            exit();
         }
         $visit_logs = M('visit_logs');
         $count = $visit_logs->where("IP = '{$this->visit_ip}' AND TYPE = 'sql'")->count();

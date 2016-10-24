@@ -4,6 +4,12 @@ use Think\Controller;
 use Think\Exception;
 
 class DetailController extends CommonController{
+
+    public function __construct(){
+        parent::__construct();
+        parent::filetr();
+    }
+
     public function index(){
         $id = intval($_GET['id']);
         if(!$id || !is_numeric($id)){

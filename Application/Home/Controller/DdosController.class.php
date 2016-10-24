@@ -52,7 +52,10 @@ class DdosController extends CommonController{
         if (!empty($rel)) {
             if ($rel['type'] == 'ddos') {
                 if ($this->block_type['ddos'] == 'lock') {
-                    $this->error($rel['NO'], $rel['MSG']);
+                    $this->assign('bianhao',$rel['no']);
+                    $this->assign('info','请不要连续攻击本网站');
+                    $this->display("Public/dispatch_jump");
+                    exit();
                 }
                 else {
                     if(!isset($_SESSION['kws_code_entered'])) {

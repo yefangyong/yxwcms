@@ -4,6 +4,12 @@ use Think\Controller;
 use Think\Exception;
 
 class IndexController extends CommonController {
+
+    public function __construct(){
+        parent::__construct();
+        parent::filetr();
+    }
+
     public function index($type='')
     {
         //获取排行数据
@@ -30,10 +36,6 @@ class IndexController extends CommonController {
         if ($type == 'build_html') {
             $this->buildhtml('index', HTML_PATH, 'Index/index');
         } else {
-            $res = new DdosController();
-            $res->protect();
-            $rel = new SqlController();
-            $rel->protect();
             $this->display();
         }
     }
