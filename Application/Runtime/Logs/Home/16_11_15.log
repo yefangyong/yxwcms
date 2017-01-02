@@ -1,0 +1,567 @@
+[ 2016-11-15T22:29:54+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019002s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() E:\WWW\project\Application\Home\Controller\CommonController.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0510s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479220191' AND TYPE = 'ddos' ) [ RunTime:0.0105s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0440s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479220193 > ENDTIME ) [ RunTime:0.0115s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479220193' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1479220193','ddos') [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0320s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479220191' AND TYPE = 'sql' ) [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479220193 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479220193' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0475s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc LIMIT 10   [ RunTime:0.0185s ]
+NOTIC: [2048] Declaration of Common\Model\PositioncontentModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0330s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 2 ORDER BY listorder desc,id desc LIMIT 1   [ RunTime:0.0120s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 3 ORDER BY listorder desc,id desc LIMIT 3   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY news_id desc LIMIT 30   [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc,id desc LIMIT 2   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000500s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000500s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 19 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 19 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0230s ]
+NOTIC: [8] Undefined index: name E:\WWW\project\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.222528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.222528s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.024003s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.024504s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011001s ]
+
+[ 2016-11-15T22:29:55+08:00 ] 127.0.0.1 /index.php?c=index&a=getCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() E:\WWW\project\Application\Home\Controller\CommonController.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0085s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479220193' AND TYPE = 'ddos' ) [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0090s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479220195 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479220195' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1479220195','ddos') [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479220193' AND TYPE = 'sql' ) [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479220195 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479220195' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('44','53','51','50','49','48','47','46','43')  [ RunTime:0.0015s ]
+
+[ 2016-11-15T22:45:40+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() E:\WWW\project\Application\Home\Controller\CommonController.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0105s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479221138' AND TYPE = 'ddos' ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0120s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479221140 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479221140' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1479221140','ddos') [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479221138' AND TYPE = 'sql' ) [ RunTime:0.0010s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479221140 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479221140' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc LIMIT 10   [ RunTime:0.0015s ]
+NOTIC: [2048] Declaration of Common\Model\PositioncontentModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0095s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 2 ORDER BY listorder desc,id desc LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 3 ORDER BY listorder desc,id desc LIMIT 3   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY news_id desc LIMIT 30   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc,id desc LIMIT 2   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000500s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 19 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 19 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: name E:\WWW\project\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005001s ]
+
+[ 2016-11-15T22:45:41+08:00 ] 127.0.0.1 /index.php?c=index&a=getCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() E:\WWW\project\Application\Home\Controller\CommonController.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0095s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479221139' AND TYPE = 'ddos' ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0075s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479221141 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479221141' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1479221141','ddos') [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479221139' AND TYPE = 'sql' ) [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479221141 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479221141' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('44','53','51','50','49','48','47','46','43')  [ RunTime:0.0015s ]
+
+[ 2016-11-15T22:50:31+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() E:\WWW\project\Application\Home\Controller\CommonController.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0075s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479221429' AND TYPE = 'ddos' ) [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0075s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479221431 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479221431' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1479221431','ddos') [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479221429' AND TYPE = 'sql' ) [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479221431 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479221431' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc LIMIT 10   [ RunTime:0.0025s ]
+NOTIC: [2048] Declaration of Common\Model\PositioncontentModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0075s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 2 ORDER BY listorder desc,id desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 3 ORDER BY listorder desc,id desc LIMIT 3   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY news_id desc LIMIT 30   [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc,id desc LIMIT 2   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000500s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 19 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 19 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: name E:\WWW\project\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046506s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001500s ]
+
+[ 2016-11-15T22:50:31+08:00 ] 127.0.0.1 /index.php?c=index&a=getCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() E:\WWW\project\Application\Home\Controller\CommonController.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0070s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479221429' AND TYPE = 'ddos' ) [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0085s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479221431 > ENDTIME ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479221431' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1479221431','ddos') [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479221429' AND TYPE = 'sql' ) [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479221431 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479221431' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('44','53','51','50','49','48','47','46','43')  [ RunTime:0.0015s ]
+
+[ 2016-11-15T22:51:48+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() E:\WWW\project\Application\Home\Controller\CommonController.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0255s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479221506' AND TYPE = 'ddos' ) [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0070s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479221508 > ENDTIME ) [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479221508' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1479221508','ddos') [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479221506' AND TYPE = 'sql' ) [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479221508 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479221508' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc LIMIT 10   [ RunTime:0.0015s ]
+NOTIC: [2048] Declaration of Common\Model\PositioncontentModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0075s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 2 ORDER BY listorder desc,id desc LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 3 ORDER BY listorder desc,id desc LIMIT 3   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY news_id desc LIMIT 30   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc,id desc LIMIT 2   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 19 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 19 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: name E:\WWW\project\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041505s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-15T22:51:48+08:00 ] 127.0.0.1 /index.php?c=index&a=getCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() E:\WWW\project\Application\Home\Controller\CommonController.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0075s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479221506' AND TYPE = 'ddos' ) [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479221508 > ENDTIME ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479221508' ) LIMIT 1   [ RunTime:0.0025s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1479221508','ddos') [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479221506' AND TYPE = 'sql' ) [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479221508 > ENDTIME ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479221508' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('44','53','51','50','49','48','47','46','43')  [ RunTime:0.0005s ]
+
+[ 2016-11-15T22:58:04+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002501s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() E:\WWW\project\Application\Home\Controller\CommonController.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0100s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479221882' AND TYPE = 'ddos' ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0090s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479221884 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479221884' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1479221884','ddos') [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479221882' AND TYPE = 'sql' ) [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479221884 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479221884' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc LIMIT 10   [ RunTime:0.0015s ]
+NOTIC: [2048] Declaration of Common\Model\PositioncontentModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 2 ORDER BY listorder desc,id desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 3 ORDER BY listorder desc,id desc LIMIT 3   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY news_id desc LIMIT 30   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc,id desc LIMIT 2   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 19 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 19 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: name E:\WWW\project\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002501s ]
+
+[ 2016-11-15T22:58:04+08:00 ] 127.0.0.1 /index.php?c=index&a=getCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001501s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() E:\WWW\project\Application\Home\Controller\CommonController.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0090s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479221882' AND TYPE = 'ddos' ) [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0100s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479221884 > ENDTIME ) [ RunTime:0.0015s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479221884' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1479221884','ddos') [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479221882' AND TYPE = 'sql' ) [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479221884 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479221884' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('44','53','51','50','49','48','47','46','43')  [ RunTime:0.0015s ]
+
+[ 2016-11-15T23:14:18+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() E:\WWW\project\Application\Home\Controller\CommonController.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0090s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479222856' AND TYPE = 'ddos' ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0085s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479222858 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479222858' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1479222858','ddos') [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479222856' AND TYPE = 'sql' ) [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479222858 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479222858' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc LIMIT 10   [ RunTime:0.0015s ]
+NOTIC: [2048] Declaration of Common\Model\PositioncontentModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0095s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 2 ORDER BY listorder desc,id desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 3 ORDER BY listorder desc,id desc LIMIT 3   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY news_id desc LIMIT 30   [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc,id desc LIMIT 2   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000500s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000500s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 19 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 19 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: name E:\WWW\project\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-15T23:14:19+08:00 ] 127.0.0.1 /index.php?c=index&a=getCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() E:\WWW\project\Application\Home\Controller\CommonController.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0065s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479222857' AND TYPE = 'ddos' ) [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0070s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479222859 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479222859' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1479222859','ddos') [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479222857' AND TYPE = 'sql' ) [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479222859 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479222859' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('44','53','51','50','49','48','47','46','43')  [ RunTime:0.0010s ]
+
+[ 2016-11-15T23:32:03+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003500s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() E:\WWW\project\Application\Home\Controller\CommonController.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0080s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479223921' AND TYPE = 'ddos' ) [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0075s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479223923 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479223923' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1479223923','ddos') [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479223921' AND TYPE = 'sql' ) [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479223923 > ENDTIME ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479223923' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc LIMIT 10   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\PositioncontentModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0085s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 2 ORDER BY listorder desc,id desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 3 ORDER BY listorder desc,id desc LIMIT 3   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY news_id desc LIMIT 30   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title E:\WWW\project\Application\Common\Model\PositioncontentModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc,id desc LIMIT 2   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with that of Think\Model::save() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 19 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with that of Think\Model::select() E:\WWW\project\Application\Common\Model\BasicModel.class.php 第 19 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\MenuModel.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: name E:\WWW\project\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2016-11-15T23:32:04+08:00 ] 127.0.0.1 /index.php?c=index&a=getCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with that of Think\Controller::error() E:\WWW\project\Application\Home\Controller\CommonController.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0070s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479223922' AND TYPE = 'ddos' ) [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0075s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479223924 > ENDTIME ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479223924' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1479223924','ddos') [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1479223922' AND TYPE = 'sql' ) [ RunTime:0.0005s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1479223924 > ENDTIME ) [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1479223924' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with that of Think\Model::find() E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('44','53','51','50','49','48','47','46','43')  [ RunTime:0.0010s ]
+

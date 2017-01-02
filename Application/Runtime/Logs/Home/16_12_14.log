@@ -1,0 +1,27 @@
+[ 2016-12-14T19:18:56+08:00 ] 127.0.0.1 /index.php?c=index&a=getCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) E:\WWW\project\Application\Home\Controller\CommonController.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `cms_ddos` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `cms_ddos` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_visit_logs` [ RunTime:0.0400s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1481713836' AND TYPE = 'ddos' ) [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `cms_lock_logs` [ RunTime:0.0500s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1481714336 > ENDTIME ) [ RunTime:0.0100s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1481714336' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `cms_visit_logs` (`IP`,`TIME`,`TYPE`) VALUES ('127.0.0.1','1481714336','ddos') [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'ddos' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cms_sql` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `cms_sql` LIMIT 1   [ RunTime:0.0000s ]
+SQL: DELETE FROM `cms_visit_logs` WHERE ( TIME < '1481714334' AND TYPE = 'sql' ) [ RunTime:0.0000s ]
+SQL: DELETE FROM `cms_lock_logs` WHERE ( 1481714336 > ENDTIME ) [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_lock_logs` WHERE ( IP='127.0.0.1' AND ENDTIME > '1481714336' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_visit_logs` WHERE ( IP = '127.0.0.1' AND TYPE = 'sql' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) E:\WWW\project\Application\Common\Model\NewsModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('44','53','51','50','49','48','47','46','43')  [ RunTime:0.0200s ]
+

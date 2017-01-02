@@ -53,7 +53,7 @@ $navs = D('Menu')->getAdminMenu(); $index=''; ?>
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     
-    <a class="navbar-brand" >singcms内容管理平台</a>
+    <a class="navbar-brand" >医讯网内容管理平台</a>
   </div>
   <!-- Top Menu Items -->
   <ul class="nav navbar-right top-nav">
